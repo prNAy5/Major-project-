@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTA Modernization - Vehicle Registration</title>
+
+   
+    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Registration - RTA Modernization</h1>
+        
+      
+        <!-- Aadhaar Verification Form -->
+        <div id="aadhaar-verification" style="display:block">
+            <h2>Aadhaar Verification</h2>
+            <form id="aadhaarForm">
+                <label for="aadhaarNumber">Enter Aadhaar Number:</label>
+                <input type="number" id="aadhaarNumber" name="aadhaarNumber" required>
+                <div id="adhaarMessage"></div>
+                <button type="submit">Get OTP</button>
+
+                
+            </form>
+
+            <!-- OTP Input Section -->
+            <div id="otp-section" style="display:none;">
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" required>
+                <button id="verifyOtpButton">Verify OTP</button>
+            </div>
+        </div>
+
+
+            <div id = 'buttonReg'>
+           <!-- Temporary and Permanent Registration Buttons -->
+           <button type="button" id="tempRegButton" style="display: none;">Temporary Registration</button>
+           <button type="button" id="permRegButton" style="display:none;">Permanent Registration</button>
+        </div>
+
+           <!-- File Inputs for Temporary Registration -->
+           <div id="tempRegistrationFields" style="display:none;">
+               <h3>Documents for Temporary Registration:</h3>
+               <label for="salesCertificate">Copy of Sales certificate in Form 21:</label>
+               <input type="file" id="salesCertificate" name="salesCertificate" >
+               <label for="roadWorthinessCert">Copy of Road worthiness certificate in Form 22:</label>
+               <input type="file" id="roadWorthinessCert" name="roadWorthinessCert">
+               <label for="insuranceCert">Copy of Valid Insurance Certificate:</label>
+               <input type="file" id="insuranceCert" name="insuranceCert">
+               <label for="pollutionCert">Pollution Under control Certificate:</label>
+               <input type="file" id="pollutionCert" name="pollutionCert">
+               <label for="addressProof">Copy of Proof of Address (Ration Card, Electricity Bill...):</label>
+               <input type="file" id="addressProof" name="addressProof">
+               <label for="designApproval">Copy of Design approval (if applicable):</label>
+               <input type="file" id="designApproval" name="designApproval">
+               <label for="customsClearance">Copy of Customs Clearance (for Imported Vehicles):</label>
+               <input type="file" id="customsClearance" name="customsClearance">
+               <label for="registrationFee">Fee for Temporary Registration (Rs. 15):</label>
+               <input type="file" id="registrationFee" name="registrationFee">
+               <button id="RegistrationBtn">Temporary Registration</button>
+           </div>
+
+           <!-- File Inputs for Permanent Registration -->
+           <div id="permRegistrationFields" style="display:none;">
+               <h3>Documents for Permanent Registration:</h3>
+               <label for="permanentSalesCertificate">Sales certificate in Form 21:</label>
+               <input type="file" id="permanentSalesCertificate" name="permanentSalesCertificate">
+               <label for="permanentRoadWorthiness">Road worthiness certificate in Form 22:</label>
+               <input type="file" id="permanentRoadWorthiness" name="permanentRoadWorthiness">
+               <label for="permanentInsurance">Valid Insurance Certificate:</label>
+               <input type="file" id="permanentInsurance" name="permanentInsurance">
+               <label for="permanentAddressProof">Proof of Address (Ration Card, Electricity Bill...):</label>
+               <input type="file" id="permanentAddressProof" name="permanentAddressProof">
+               <label for="permanentDesignApproval">Design approval (if applicable):</label>
+               <input type="file" id="permanentDesignApproval" name="permanentDesignApproval">
+               <label for="permanentCustomsClearance">Customs Clearance (for Imported Vehicles):</label>
+               <input type="file" id="permanentCustomsClearance" name="permanentCustomsClearance">
+               <label for="permanentRegistrationFee">Appropriate Fee for Permanent Registration:</label>
+               <input type="file" id="permanentRegistrationFee" name="permanentRegistrationFee">
+               <button id="RegistrationBtn2">Permanent Registration</button>
+             </div>
+
+
+
+        <!-- Slot Booking Form -->
+        <div id="slot-booking" style="display:none;">
+            <h2>Book Slot for Vehicle Registration</h2>
+            <form id="slotBookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required >
+                <div id="message"></div>
+                
+                <label for="mobileNumber">Mobile Number:</label>
+                <input type="text" id="mobileNumber" name="mobileNumber" required >
+                <div id="numberMessage"></div>
+
+                <label for="panCard">PAN Card:</label>
+                <input type="text" id="panCard" name="panCard" required>
+                <div id="panMessage"></div>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="message"></div>
+                
+                <label for="vehicleRegNumber">Vehicle Temporary Registration Number:</label>
+                <input type="text" id="vehicleRegNumber" name="vehicleRegNumber" required>
+                <div id="message"></div>
+
+                <label for="chassis">Chassis Number</label>
+                <input type="file" id="chassis" name="chassis" required>
+                <div id="message"></div>
+
+                <label for="slotDate">Select Slot Date:</label>
+                <input type="date" id="slotDate" name="slotDate" min="" required>
+                <div id="message"></div>
+
+                <label for="slotTime">Select Slot Time:</label>
+                <select id="slotTime" name="slotTime" required>
+                    <option value="09">09:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    
+                </select>
+                <div id="message"></div>
+
+                <button type="submit">Book Slot</button>
+            </form>
+   
+        </div>
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
