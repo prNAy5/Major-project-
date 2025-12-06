@@ -1,4 +1,4 @@
-# Major-project-
+# RTA Modularization Major-project-
 This project introduces a comprehensive and secure digital platform for vehicle document verification,
 seamlessly integrated with the Road Transport Authority (RTA). Designed for both web and mobile
 applications, the system digitizes and simplifies the traditionally paper-heavy and time-consuming
